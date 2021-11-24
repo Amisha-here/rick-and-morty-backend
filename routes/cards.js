@@ -1,7 +1,9 @@
-import express from 'express';
-import auth from  '../middleware/auth.js'
+const express = require('express')
 
-import { getCard,getCards,createCard,deleteCard } from '../controllers/cards.js';
+const auth = require('../middleware/auth.js');
+
+
+const { getCard,getCards,createCard,deleteCard } = require('../controllers/cards.js');
 
 const router = express.Router();
 
@@ -10,4 +12,4 @@ router.get('/:id', getCard);
 router.post('/', auth,createCard);
 router.delete('/:id',auth,deleteCard);
 
-export default router;
+module.exports = router;

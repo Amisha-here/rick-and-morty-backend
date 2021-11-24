@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose')
 
 const postSchema = mongoose.Schema({
     name: String,
@@ -10,4 +10,4 @@ const postSchema = mongoose.Schema({
 
 var postCard = mongoose.model('postCard',postSchema);
 
-export default postCard;
+module.exports = postCard;
